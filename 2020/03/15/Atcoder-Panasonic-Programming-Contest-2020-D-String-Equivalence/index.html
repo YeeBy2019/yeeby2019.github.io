@@ -6,20 +6,17 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Codeforces Round #628(div 2):A EhAb AnD gCd | 欢迎！</title>
+  <title>Atcoder Panasonic Programming Contest 2020:D String Equivalence | 欢迎！</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="引言这场比赛我没有打，只能赛后来补补题了╮(╯▽╰)╭">
-<meta name="keywords" content="Codeforces">
+  <meta name="keywords" content="Atcoder">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Codeforces Round #628(div 2):A EhAb AnD gCd">
-<meta property="og:url" content="http://yoursite.com/2020/03/15/Codeforces-Round-628-div-2-A-EhAb-AnD-gCd/index.html">
+<meta property="og:title" content="Atcoder Panasonic Programming Contest 2020:D String Equivalence">
+<meta property="og:url" content="http://yoursite.com/2020/03/15/Atcoder-Panasonic-Programming-Contest-2020-D-String-Equivalence/index.html">
 <meta property="og:site_name" content="欢迎！">
-<meta property="og:description" content="引言这场比赛我没有打，只能赛后来补补题了╮(╯▽╰)╭">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2020-03-15T09:37:02.707Z">
+<meta property="og:updated_time" content="2020-03-15T14:56:38.405Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Codeforces Round #628(div 2):A EhAb AnD gCd">
-<meta name="twitter:description" content="引言这场比赛我没有打，只能赛后来补补题了╮(╯▽╰)╭">
+<meta name="twitter:title" content="Atcoder Panasonic Programming Contest 2020:D String Equivalence">
   
     <link rel="alternative" href="/atom.xml" title="欢迎！" type="application/atom+xml">
   
@@ -155,52 +152,68 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-Codeforces-Round-628-div-2-A-EhAb-AnD-gCd" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-Atcoder-Panasonic-Programming-Contest-2020-D-String-Equivalence" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      Codeforces Round #628(div 2):A EhAb AnD gCd
+      Atcoder Panasonic Programming Contest 2020:D String Equivalence
     </h1>
   
 
         
-        <a href="/2020/03/15/Codeforces-Round-628-div-2-A-EhAb-AnD-gCd/" class="archive-article-date">
-  	<time datetime="2020-03-15T09:22:46.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-03-15</time>
+        <a href="/2020/03/15/Atcoder-Panasonic-Programming-Contest-2020-D-String-Equivalence/" class="archive-article-date">
+  	<time datetime="2020-03-15T14:31:36.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-03-15</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="引言"><a href="#引言" class="headerlink" title="引言"></a>引言</h2><p>这场比赛我没有打，只能赛后来补补题了╮(╯▽╰)╭</p>
+        <br>
+
 <a id="more"></a>
 
-<hr>
-<h2 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h2><p>大意是：给你一个整数x，找出一对数（a，b）使得<br>$$<br>GCD(a,b)+LCM(a,b)=x<br>$$<br>如果有多组输出符合条件，只需要输出其中的任意一组。</p>
-<p><em>注：GCD代表最大公约数，LCM代表最小公约数。</em></p>
-<blockquote>
+<h2 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h2><p>我们考虑一个只含有小写字母的字符串，当满足以下条件时，我们称两个字符串 <strong>isomorphic</strong>(同构)：</p>
 <ul>
-<li>1≤t≤100</li>
-<li>2≤x≤10<sup>9</sup></li>
-<li>1≤a,b≤10<sup>9</sup></li>
+<li><p>$$<br>\vert s\vert=\vert t\vert<br>$$</p>
+</li>
+<li><p>对于每一对 <strong><em>i</em></strong>，<strong><em>j</em></strong>:</p>
+<ul>
+<li><p>$$<br>s_i=s_j and t_i=t_j<br>$$</p>
+</li>
+<li><p>$$<br>s_i≠s_j and t_i≠t_j<br>$$</p>
+</li>
 </ul>
-</blockquote>
+</li>
+</ul>
+<p>例如：‘<strong><em>abcac</em></strong>’与‘<strong><em>zyxzx</em></strong>’同构。</p>
+<p>下面我们定义当一个字符串满足以下条件时，我们称它为<strong>normal form</strong>(标准的)：</p>
+<ul>
+<li>对于每个与<strong><em>s</em></strong>同构的字符串<strong><em>t</em></strong>，都有<strong><em>s</em></strong>≤<strong><em>t</em></strong>，这里的小于等于是指字典序上的小于等于。</li>
+</ul>
+<p>例如：‘<strong><em>abcac</em></strong>’就是<strong>normal form</strong>，但是‘<strong><em>zyxzx</em></strong>’不是，因为‘<strong><em>zyxzx</em></strong>’在字典序上大于‘<strong><em>abcac</em></strong>’</p>
+<p>下面我们输入一个<strong><em>N</em></strong>，要求输出长度为<strong><em>N</em></strong>的所有<strong>normal form</strong>类型的字符串。</p>
+<p>注：</p>
+<ul>
+<li><p>$$<br>1≤N≤10<br>$$</p>
+</li>
+<li><p>所有的输入都是整数</p>
+</li>
+</ul>
 <hr>
-<h2 id="样例输入1"><a href="#样例输入1" class="headerlink" title="样例输入1"></a>样例输入1</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">2</span><br><span class="line">2</span><br><span class="line">14</span><br></pre></td></tr></table></figure>
+<h2 id="样例输入1"><a href="#样例输入1" class="headerlink" title="样例输入1"></a>样例输入1</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">1</span><br></pre></td></tr></table></figure>
 
-<h2 id="样例输出1"><a href="#样例输出1" class="headerlink" title="样例输出1"></a>样例输出1</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">1 1</span><br><span class="line">6 4</span><br></pre></td></tr></table></figure>
+<h2 id="样例输出2"><a href="#样例输出2" class="headerlink" title="样例输出2"></a>样例输出2</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">a</span><br></pre></td></tr></table></figure>
 
 <hr>
-<p>水题，但是需要一定的奇(jing)思(yan)妙(zhi)想(tan),</p>
-<p>要使最大公约数加最小公约数等于这个数的本身，那么(x,x-1)一定满足这个条件。</p>
-<p>amazing。</p>
-<p>下面是代码（一个输出的事还要什么代码）：</p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> t;</span><br><span class="line">	<span class="built_in">cin</span>&gt;&gt;t;</span><br><span class="line">	<span class="keyword">int</span> n;</span><br><span class="line">	<span class="keyword">while</span>(t--)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="built_in">cin</span>&gt;&gt;n;</span><br><span class="line">		<span class="built_in">cout</span>&lt;&lt;<span class="number">1</span>&lt;&lt;<span class="string">" "</span>&lt;&lt;n<span class="number">-1</span>&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="样例输入2"><a href="#样例输入2" class="headerlink" title="样例输入2"></a>样例输入2</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">2</span><br></pre></td></tr></table></figure>
 
-<p>2020.03.15 17:36</p>
+<h2 id="样例输出2-1"><a href="#样例输出2-1" class="headerlink" title="样例输出2"></a>样例输出2</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">aa</span><br><span class="line">ab</span><br></pre></td></tr></table></figure>
+
+<hr>
 
       
 
@@ -240,7 +253,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Codeforces</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">Atcoder</a>
         		</li>
       		
 		</ul>
@@ -296,7 +309,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2020/03/15/Codeforces-Round-628-div-2-A-EhAb-AnD-gCd/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2020/03/15/Atcoder-Panasonic-Programming-Contest-2020-D-String-Equivalence/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -310,18 +323,9 @@
   
 <nav id="article-nav">
   
-    <a href="/2020/03/15/Codeforces-Round-628-div-2-B-CopyCopyCopyCopyCopy/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          Codeforces Round #628(div 2):B CopyCopyCopyCopyCopy
-        
-      </div>
-    </a>
   
-  
-    <a href="/2020/03/15/Atcoder-Panasonic-Programming-Contest-2020-C/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">Atcoder Panasonic Programming Contest 2020:C Sqrt Inequality</div>
+    <a href="/2020/03/15/Codeforces-Round-628-div-2-B-CopyCopyCopyCopyCopy/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Codeforces Round #628(div 2):B CopyCopyCopyCopyCopy</div>
       <i class="icon-circle-right"></i>
     </a>
   
