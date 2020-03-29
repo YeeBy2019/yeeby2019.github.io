@@ -8,20 +8,18 @@
   <link rel="dns-prefetch" href="http://yeeby2019.github.io">
   <title>LeetCode:面试题40 最小的k个数 | 欢迎！</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="引言第一次独立做出来LeetCode的每日一题，对LeetCode的提交方式充满了怨念但只能慢慢摸索熟悉 一个排序+输出的事非要使用vector来完成让我很难受。 写这篇文的目的主要还是为了熟悉LeetCode反人类的设计(个人认为) 2020.03.21 0:13补充： 看了官方题解才惊觉自己的无知，更深刻的认识到了什么才叫算法">
+  <meta name="description" content="enter password to read.">
 <meta name="keywords" content="LeetCode">
 <meta property="og:type" content="article">
 <meta property="og:title" content="LeetCode:面试题40 最小的k个数">
 <meta property="og:url" content="http://yeeby2019.github.io/2020/03/21/LeetCode-面试题40-最小的k个数/index.html">
 <meta property="og:site_name" content="欢迎！">
-<meta property="og:description" content="引言第一次独立做出来LeetCode的每日一题，对LeetCode的提交方式充满了怨念但只能慢慢摸索熟悉 一个排序+输出的事非要使用vector来完成让我很难受。 写这篇文的目的主要还是为了熟悉LeetCode反人类的设计(个人认为) 2020.03.21 0:13补充： 看了官方题解才惊觉自己的无知，更深刻的认识到了什么才叫算法">
+<meta property="og:description" content="enter password to read.">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="http://yeeby2019.github.io/2020/03/21/LeetCode-面试题40-最小的k个数/bbb.png">
-<meta property="og:updated_time" content="2020-03-20T16:17:12.635Z">
+<meta property="og:updated_time" content="2020-03-29T14:58:07.015Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="LeetCode:面试题40 最小的k个数">
-<meta name="twitter:description" content="引言第一次独立做出来LeetCode的每日一题，对LeetCode的提交方式充满了怨念但只能慢慢摸索熟悉 一个排序+输出的事非要使用vector来完成让我很难受。 写这篇文的目的主要还是为了熟悉LeetCode反人类的设计(个人认为) 2020.03.21 0:13补充： 看了官方题解才惊觉自己的无知，更深刻的认识到了什么才叫算法">
-<meta name="twitter:image" content="http://yeeby2019.github.io/2020/03/21/LeetCode-面试题40-最小的k个数/bbb.png">
+<meta name="twitter:description" content="enter password to read.">
   
     <link rel="alternative" href="/atom.xml" title="欢迎！" type="application/atom+xml">
   
@@ -177,30 +175,15 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="引言"><a href="#引言" class="headerlink" title="引言"></a>引言</h2><p>第一次<u>独立</u>做出来LeetCode的每日一题，对LeetCode的提交方式充满了怨念但只能慢慢摸索熟悉</p>
-<p>一个排序+输出的事非要使用vector来完成让我很难受。</p>
-<p>写这篇文的目的主要还是为了熟悉LeetCode反人类的设计(<u>个人认为</u>)</p>
-<p>2020.03.21 0:13补充：</p>
-<p>看了官方题解才惊觉自己的无知，更深刻的认识到了什么才叫<strong>算法</strong></p>
-<a id="more"></a>
-
-<hr>
-<h2 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h2><p>字面意思，给定一个数组arr和一个数字k，要求输出最小的k个数字，输出顺序没有要求。</p>
-<hr>
-<h3 id="样例输入1"><a href="#样例输入1" class="headerlink" title="样例输入1"></a>样例输入1</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">arr = [3,2,1], k = 2</span><br></pre></td></tr></table></figure>
-
-<h3 id="样例输出1"><a href="#样例输出1" class="headerlink" title="样例输出1"></a>样例输出1</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[1,2] 或者 [2,1]</span><br></pre></td></tr></table></figure>
-
-<hr>
-<p>很明白的思路，主要是提交的代码：</p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> &#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; getLeastNumbers(<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;&amp; arr, <span class="keyword">int</span> k) &#123;</span><br><span class="line">        sort(arr.begin(),arr.end());</span><br><span class="line">        arr.erase(arr.begin()+k,arr.end());</span><br><span class="line">        <span class="keyword">return</span> arr;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
-
-<p>帮我重新熟悉了一遍vector容器的操作哈哈哈</p>
-<p>最后是评测结果：</p>
-<img src="/2020/03/21/LeetCode-面试题40-最小的k个数/bbb.png" title="NC50169">
-
-<p>2020.03.21 0:11</p>
-
+        <div id="hexo-blog-encrypt" data-wpm="Oh, this is an invalid password. Check and try again, please." data-whm="OOPS, these decrypted content may changed, but you can still have a look.">
+  <div class="hbe-input-container">
+  <input type="password" id="hbePass" placeholder="" />
+    <label for="hbePass">请输入密码</label>
+    <div class="bottom-line"></div>
+  </div>
+  <script id="hbeData" type="hbeData" data-hmacdigest="301bc13a87f9cd74dec2ba79e75bc56bf89366325d1221605ad398dbb85d774b">7a05a1ee4788168db7a6ce4278eb9089b68dae171d2c680ce26296d1dd802677b8a498a043d6447dac8eac48db00408db51b4008c3713e7426ada372e203bc67783a3517bb66cec58a348798b7e757d99735165a40f2ddf6625a80bd61f63dd345efba9df4014138e52c46d2acd4133395c46406dff8328c61b3cd5b4d7744203e453aa40ac76ab184499d89adccf2bdd169c5440b57b45552fbbbc757dbf306fb9fdabab4518cae38423c90a0ef466582dfa4f0f3a64e4dca7d53fc2e888fa32f8fefb5d91543851e7ae5688c6e1ec13324a8bff6a66d5e7277d1afd8aac355408045b57a71d54e681a353b97888f42b1fe2128c5bdd25aadaa2004714e1aec9aa3e7e90622cb3c2d8a5185302c9ef9171c28a889e554097cbe9063b958505ef84654082436645cac6bc92599b2586119ce34dd63014e60cb1f3e7314e91d0cd87f5694c0cd586aa6f37b21bad02439facaa7d3c6cb38883b75f214e73d3e00093d5ba7a2dd5227f93a7d0a6a8a66a8c8929f558533641bb30ffd4e6381df4e8f47ee81ea585d55c916bd0c23e4f3990ff542eec092919384ac7d55cc43d3a499b88fbc99e5b2e484f8cb1b62263bd7b0be2557da861e3eb8e4dca2eaf0ff5c5b70083baf83f1efa4ee2b4c498fc0ebd755377c8025bbc9e4dcd3c8d7e372aa595cb2cb3ec5d623047670e7f874a49aebd3c79e7be2759cef19e34289a28b9968a3c70baead8cc920d3afbb92a205f671354ebb733723b85df609d8473cf58fc92378b53a2995e38a853f08c5f15f8a3ff9b3b1f4cb15762c978ef05d4877151358ed321f3fdd8ffba5cb2268f348546127904c096d84bbd511eec10018e927f9fde9380a7a77bf6f6e5aaabdf610e136158bee391f816790b5d88e2dd2081620388fce6eb6f3a3428085f581183e1b39e3225d1c07e939ea29f2a297e155ea08fd22773149f477b9bf2d4578b0c6fc5cd45cc017b053ff932b5a7cdc1dec48a3e55d0156effcbee5314f534c08e3b97991987f486528bbeacd76c94b520e71d5d4fe36cec30fac5c1003d5530ac6cea15697fc88b74e7e7c9721c6150c1b0cf0ad491d2d32b7a94195dac190f77f38285927d6d892d56cd401d304f220351d640851b6870fca32418cf3f15332e37258c31adef741093d073d81a01e9a647e34a1bbf7cdeaa9fc58b6216b802077aa7a7e07179f095b626ba65a3413618f3212fc973d54a9b9e7d2e0fb298bb73262401196c50e100cd62add74e2465e72e5e44e8946f22855055088b3f0fc01ff3533b4c72ddf4354708f069f92c7fabe0d852674b45470b876862e8c155dbbce8ab225d0babf2bfc3e75f31101c3f098e799761254772d9ea60a4b46472cc85681c03ceff0d918363dbf15f82ed0dfcccb36d6cef38d4b759df45522cf7389cac7a5e2c448b6a37768434feda804e7d16b326a2603fff7c173378382b4955bb8acbf540939db4e6faa163e4082929e900478f4861e1daa922fb4b8b6ead66c97f266a2c2c9568846b580ca5a770c9a57994344e5a64335299f8dbf5bcde27352eae2c6251741550392ca0405174ef256fa110cf9464480659aa16d533f13583943504f6bf5d35f48912db96a409d101b68efaa3c6d7c469ad5ce01f4662751c54d01596aa22542604c067eaee0beff89e399792974a93ecfb17b836f7c380e112b8a29321c9b6916cf0f0c22546d98254b0cebec52b1223f03761b188cdab3250354ab05aaa3405773b715a8a0b721c2ee353fb9cd7bb5d05a9398296412c2ec43ccd37a0ab11bc3c0fe3a3ccd68c30038529bb7eebbcb0d17eb42025328a3f8c46bbc795795cfdbe0a6fc64ac0577909b999e0843945bdab90c19c665a7345efdb79dc800aca5d7696089dbdbfb6d4eca1eb80e7cf64c508155accaafa9ca5bf2c9b626fb67badd1f19a5db8ac7e231336ccb0bc93e6c250b7c7e619995115c509dddf2587bf5a47add8ba5b8f1482298316f8f2b5e5d458950c2e9dec5b0d7ab17f656f351d111b051c82bdef0ac0385223bb8d7120257f846fcaabfe1bbe97f3608baefd0382b3f36eb8194f07779b56b651d9f42babc7e60094a7f208e1b42ab2c909aca466ba2de82a53a61b155d8e2c4f52f069e848da8f6efd8be4f79afb710578db01371d56f097e99756f276760bba0ab53cf634782f8e601c0c62e95facfa7727059c314a8cc2492d56ed41828967437d650b7c007390212fa37b558629a49959cebd3f30d8016aed4a2a42b45d6ef55a7405d9ad740686c1d90290ca8ba6920d819d0d5dca074c742915e5d87df7398ad94806ba3c46be32bf1b2b860890225623877decddabbd9c09f5d69e7ac37992dd9713f9aeb0142f8b31f0bade4c6c381d7f644b00e6bcea4b160408f42e1e235463ae5d18af27f7738ecfc8a2d0e7e917df48f307231ecd5c7ebff00eae45a301c9d746f844097a2a3b67537b2a1ee317a1984f1b89eb76230db2cb6833228f0c1aba06dc8aa1039a2ee6a0166b308d5b2bf298cbabeae8878848c206fb559379da789db8886780819d9558a4652b7f41b8402de08fe6beb9b1e2fe60eb26444d43e97bd759536ba57fc1f3a84773627ac891c033a2375c2a7ea154da77b5a94815173b0b119f7c97754f0ed13fb1e9978e21ba204aaae119270973c1d6edc3cc13d1ac629505583801f49ac594cf007672f18e1b740423b50232e912cbf4fdf2e370d80451872692df145c417ed4f116dfeb834977f97c89ad36e43881d946c0c77a8bed9efc715fc4ab012739d50355aba822f69cda3545e2913fb4028f961772adf23c5c4879070bbde144e9ca270af8eb4f28327fef0f3020d1fbdea00db879b4be4df01d0f48201474f74c966adeb3f7ea01b8f08c52ce56ff1ba91afae958d6b4557e2c510fb13d762c4dedaa89a54d4d113907bc9041215b990b125db40ea86dfc4551428985ecd855f44d6219d9df9b485c3da1ce3bcfac85e541f720fe22e161b2318fc1b041d907d3cfb7bf25f52f3322936d30f05bb4679a912f665e2976891b413bffbf946a344ebc4571ecd8862a305c93b021b1b69a6ca472c4db447e0db1dfb25d50b6df79d88c7d179f05a0957b3ed4a93f0b3faa023ab2349650782880273b1540e26da239d797fc3326b6cbd47d7905732d9d84c9ce758d12b5342aa3570024a2bb6ee7187ffecc0ce6887c06dbed2792537c0bb76975dd194b0a4af7841bc1bcd9050ae52e2c946e7cec3dbf6653834608ad97cf0bc1ee2525dfdc59a387a6ff022bb6b44b220a8e908f3495860180c132f07225ea9de7fcfe0183965462d86e130d2319672fad9e54f933dab2bb90fa4592b0e63f3884db53267b8b1149dcd9ddeec64c2838d35e03d0f2958848e3b4d394b6a7799f17be96e1014c3afd931ce90194b21809984236858dcb982099e7976d6cd1e0920229e521efdbfdd93954295ffe5dc758378862a98fe249bd1031743c4d0a410d0816d6320d901bd870c2de79b96f95980b3c17128e1e20b821d608c5d7f4e3300405462fff9832908db5405e6f0a932768514f6bd5c032ce618afb6275c60824e14921dbca80c8fa04847da53ba2b25217505b42b1e0b02a36bf8df75ef0adc0ae5748bd005fb52a8655fc6a0ac5f8e4a580770aa9946f9146c3c7a67cf99e4342891eee2b1cd731c6e6252bf9bf326aef4bfe9dae476cc4cdfbf335fa82247439e3296203a246e824abede8e47195093c302b58440a4c0b626f6e928ad55d3393aee50d4f8ce1f641bd9bcb1fd703608226eb01f996ad5cb64a7a759595458409668e3b83e2bc4cc97133588534e8713f3acaf8328454878059d64cffa0b5794a0b634564867ecaf70b2ab74d88cd5e4ff17ddd957ed42c974f1e6b34e080fe34e1c3b1c75006b86e4a5e752c27eacf1fe427ef180e5c41241009d183b169296a4525a95a2fcd026d76efeec6b93f6ae2e2f4ae93b3dbf974aac5482ccd62ccaf4036c0a2a83c50bc00fd17349019494962992fb164011af934d95531939acb520d99703ad3b940b7205cb</script>
+</div>
+<script src="/lib/blog-encrypt.js"></script><link href="/css/blog-encrypt.css" rel="stylesheet" type="text/css">
       
 
       
@@ -476,6 +459,14 @@ MathJax.Hub.Queue(function() {
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">LeetCode</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">hide</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">diary</a>
               </li>
              
               <li class="article-tag-list-item">

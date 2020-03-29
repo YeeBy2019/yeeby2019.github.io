@@ -6,22 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://yeeby2019.github.io">
-  <title>NC50169:钓鱼 | 欢迎！</title>
+  <title>[D]2020.3.29 | 欢迎！</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="引言BUCT ACM周赛(5) B题 这场比赛签到3题，还是在提前做过B题的基础上，fw如我 开局就被A题搞了心态，但对我来说没什么影响， 因为不会就是不会,早点签到和晚点签到并没有什么区别┑(￣Д ￣)┍">
-<meta name="keywords" content="nowcoder,BUCTOJ">
+  <meta name="description" content="Welcome to my blog,enter password to read.">
+<meta name="keywords" content="hide,diary">
 <meta property="og:type" content="article">
-<meta property="og:title" content="NC50169:钓鱼">
-<meta property="og:url" content="http://yeeby2019.github.io/2020/03/19/NC50169-钓鱼/index.html">
+<meta property="og:title" content="[D]2020.3.29">
+<meta property="og:url" content="http://yeeby2019.github.io/2020/03/29/D-2020-3-29/index.html">
 <meta property="og:site_name" content="欢迎！">
-<meta property="og:description" content="引言BUCT ACM周赛(5) B题 这场比赛签到3题，还是在提前做过B题的基础上，fw如我 开局就被A题搞了心态，但对我来说没什么影响， 因为不会就是不会,早点签到和晚点签到并没有什么区别┑(￣Д ￣)┍">
+<meta property="og:description" content="Welcome to my blog,enter password to read.">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="http://yeeby2019.github.io/2020/03/19/NC50169-钓鱼/aaa.png">
-<meta property="og:updated_time" content="2020-03-20T10:10:59.332Z">
+<meta property="og:updated_time" content="2020-03-29T13:19:04.166Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="NC50169:钓鱼">
-<meta name="twitter:description" content="引言BUCT ACM周赛(5) B题 这场比赛签到3题，还是在提前做过B题的基础上，fw如我 开局就被A题搞了心态，但对我来说没什么影响， 因为不会就是不会,早点签到和晚点签到并没有什么区别┑(￣Д ￣)┍">
-<meta name="twitter:image" content="http://yeeby2019.github.io/2020/03/19/NC50169-钓鱼/aaa.png">
+<meta name="twitter:title" content="[D]2020.3.29">
+<meta name="twitter:description" content="Welcome to my blog,enter password to read.">
   
     <link rel="alternative" href="/atom.xml" title="欢迎！" type="application/atom+xml">
   
@@ -157,67 +155,35 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-NC50169-钓鱼" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-D-2020-3-29" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      NC50169:钓鱼
+      [D]2020.3.29
     </h1>
   
 
         
-        <a href="/2020/03/19/NC50169-钓鱼/" class="archive-article-date">
-  	<time datetime="2020-03-19T12:49:46.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-03-19</time>
+        <a href="/2020/03/29/D-2020-3-29/" class="archive-article-date">
+  	<time datetime="2020-03-29T11:21:30.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-03-29</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="引言"><a href="#引言" class="headerlink" title="引言"></a>引言</h2><p>BUCT ACM周赛(5) B题</p>
-<p>这场比赛签到3题，还是在提前做过B题的基础上，fw如我</p>
-<p>开局就被A题搞了心态，但对我来说没什么影响，</p>
-<p>因为不会就是不会,早点签到和晚点签到并没有什么区别┑(￣Д ￣)┍</p>
-<a id="more"></a>
-
-<hr>
-<h2 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h2><p>我直接说题目大意：有n个钓鱼湖顺序排列，你有H个<u>小时</u>的空闲时间，从第一个湖开始出发，有选择的在每个湖边停留一段时间（<u>时间是5的倍数</u>）。从一个湖走到另一个湖步行需要时间（5的倍数）。现在我们已知在第 i 个湖停留时第一个5分钟可以钓到 F<sub>i</sub> 条鱼,之后的每五分钟钓到的鱼数减少D<sub>i</sub> 条，求最多能钓多少鱼。</p>
-<h3 id="输入"><a href="#输入" class="headerlink" title="输入"></a>输入</h3><blockquote>
-<p>第一行一个整数n，表示湖的个数，不大于25</p>
-<p>第二行一个整数H，表示空闲时间，不大于20</p>
-<p>第三行有n个整数，依次表示每个湖第一个5分钟能钓到鱼的数量 ，不大于100</p>
-<p>第四行有n个整数，依次表示以后的每5分钟钓鱼数量比前一个5分钟钓鱼数量减少的数量 </p>
-<p>第五行有n-1个整数，T<sub>i  </sub>表示由第 i 个湖到第 i+1 个湖需要花 5×T<sub>i</sub> 分钟的路程 </p>
-<p>保证在int以内 </p>
-</blockquote>
-<hr>
-<h3 id="样例输入1"><a href="#样例输入1" class="headerlink" title="样例输入1"></a>样例输入1</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">3</span><br><span class="line">1</span><br><span class="line">4 5 6</span><br><span class="line">1 2 1</span><br><span class="line">1 2</span><br></pre></td></tr></table></figure>
-
-<h3 id="样例输出1"><a href="#样例输出1" class="headerlink" title="样例输出1"></a>样例输出1</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">35</span><br></pre></td></tr></table></figure>
-
-<hr>
-<p>这道题使我充分明白了VS调试功能的强大，我看着监视变量一步一步的逐语句运行最后才理解了如何贪心，下面我就把自己的思考写下来。</p>
-<p>这道题拿到手，首先要注意的一点是H是小时，而钓鱼的单位都是以5分钟为单位，所以我们输入H之后要将H乘上12才是我们真正的空闲时间。</p>
-<p>然后我们整理一下思路，发现时间会通过两种途径消耗：①钓鱼，涉及到最后的产量 ②花费在路上的时间，对结果无影响。所以我们在计算时要先减掉花在路上的时间，剩下的时间才是我们剩下的可以用于钓鱼的时间，如果因为减去路上的时间使得空闲时间小于0了就直接break掉，输出已有的ans，游戏结束。</p>
-<p>那么问题来了：为什么这里要用break而不用continue呢？</p>
-<p>原因在于钓鱼湖顺序排列，如果我们从第二个湖走向第三个湖时在到达第三个湖之前就没有空余时间了，那么第三个以及第三个湖之后我们就都无法到达了。</p>
-<p>还没完，还没完，我们还没开始贪呢</p>
-<p>下面思考钓鱼的问题，每个湖的产量以及每五分钟的减产量现在都是不确定的，但是有一点我们可以确定，那就是每五分钟钓到的鱼的数量必定是在减少，这里就是贪心的点。</p>
-<p>既然我们要求能钓到的鱼数最多，那么我们从第一个湖开始，在不超过空闲时间的情况下，把每五分钟能钓到的鱼数都用一个数组 f 存起来，每存一次都令一个计数器cnt++，然后对这个数组从大到小排序，令cnt=min(cnt,H)，并计算前 cnt 项的和。</p>
-<p>至于这里为什么要用cnt和H两者中的较小值，原因在于每次cnt++都意味着时间的损耗，当我们cnt++的时候并没有考虑是否超出时间限度，而是以能否继续钓鱼为判断条件，所以最后求和时要考虑不超出时间限度。</p>
-<p>然后ans=max(ans，sum)，每次移动到新的湖都先存上所有可能结果<del>然后和之前的湖的结果一起进行排序</del>然后求前cnt项的和~最后取每次移动后sum的最大值，最后输出答案，游戏结束。</p>
-<p>下面是代码：</p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="function"><span class="keyword">bool</span> <span class="title">cmp</span><span class="params">(<span class="keyword">int</span> a,<span class="keyword">int</span> b)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">return</span> a&gt;b;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> n;</span><br><span class="line">	<span class="keyword">int</span> H;</span><br><span class="line">	<span class="built_in">cin</span>&gt;&gt;n&gt;&gt;H;</span><br><span class="line">	H*=<span class="number">12</span>;</span><br><span class="line">	<span class="keyword">int</span> cnt=<span class="number">0</span>;</span><br><span class="line">	<span class="keyword">int</span> ans=<span class="number">0</span>;</span><br><span class="line">	<span class="keyword">int</span> fish[<span class="number">200</span>];</span><br><span class="line">	<span class="keyword">int</span> subfish[<span class="number">200</span>];</span><br><span class="line">	<span class="keyword">int</span> t[<span class="number">200</span>];</span><br><span class="line">	<span class="keyword">int</span> f[<span class="number">200</span>]=&#123;<span class="number">0</span>&#125;;</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;i++)<span class="built_in">cin</span>&gt;&gt;fish[i];</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;i++)<span class="built_in">cin</span>&gt;&gt;subfish[i];</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">2</span>;i&lt;=n;i++)<span class="built_in">cin</span>&gt;&gt;t[i];	<span class="comment">//输入</span></span><br><span class="line">	</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;i++)	<span class="comment">//n个鱼塘 从1到n</span></span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">if</span>((H-=t[i])&lt;=<span class="number">0</span>)<span class="keyword">break</span>;	</span><br><span class="line">        <span class="comment">//判断移动后花费在路上所需的时间是否超过还剩下的时间，因此时间数组t应该从第二个开始记录  </span></span><br><span class="line">        <span class="comment">//那这里为什么不用continue而用break呢？必定是break，因为鱼塘线性排列，不可能从第一个鱼塘直接跨越到第三个鱼塘，如果时间在路上耗完，则就不能继续走下去，所以是break</span></span><br><span class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> j=fish[i],k=<span class="number">0</span>;j&gt;<span class="number">0</span>&amp;&amp;k&lt;=H;j-=subfish[i])</span><br><span class="line">		&#123;</span><br><span class="line">			cnt++;</span><br><span class="line">			f[cnt]=j;</span><br><span class="line">			k++;</span><br><span class="line">		&#125;	<span class="comment">//遍历这个鱼塘每五分钟能钓到多少鱼，并用f数组记录下来</span></span><br><span class="line">		sort(f+<span class="number">1</span>,f+cnt+<span class="number">1</span>,cmp);	<span class="comment">//贪心，从大到小排序</span></span><br><span class="line">		<span class="keyword">int</span> sum=<span class="number">0</span>;</span><br><span class="line">		cnt=min(cnt,H);	</span><br><span class="line">        <span class="comment">//为什么cnt与H要取两者中的小值？因为cnt每次加1都意味着花费了一份时间（5分钟），而时间最多只有H份，所以下面的累和sum最多取f数组的前H项</span></span><br><span class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> j=<span class="number">1</span>;j&lt;=cnt;j++)</span><br><span class="line">		&#123;</span><br><span class="line">			sum+=f[j];		<span class="comment">//取排序后f数组前cnt项作为sum</span></span><br><span class="line">		&#125;</span><br><span class="line">		ans=max(ans,sum);	<span class="comment">//找最大的sum，作为ans输出</span></span><br><span class="line">	&#125;</span><br><span class="line">	<span class="built_in">cout</span>&lt;&lt;ans&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>说到这个代码，我建议定义的变量数组都扔到全局变量，否则可能会出现不可控的情况</p>
-<p>（我猜应该是初始化的问题</p>
-<img src="/2020/03/19/NC50169-钓鱼/aaa.png" title="NC50169">
-
-<p>2020.03.19 21:47</p>
-
+        <div id="hexo-blog-encrypt" data-wpm="Oh, this is an invalid password. Check and try again, please." data-whm="OOPS, these decrypted content may changed, but you can still have a look.">
+  <div class="hbe-input-container">
+  <input type="password" id="hbePass" placeholder="" />
+    <label for="hbePass">Welcome to my blog,enter password to read.</label>
+    <div class="bottom-line"></div>
+  </div>
+  <script id="hbeData" type="hbeData" data-hmacdigest="c348e373fd5e1f4c865f61142de3dd497e7a53740b3666ed9ad83497431685f8">81be3ca92369d899a86250f6b6590833cea17687222579687ff5ea446c9bb94e4b496d56ecfb2d2b6d81521a2ccc5cf181bf89e0f5e734c849fc62ac7de09bd89dfc76ac8d75822ff6394508c37772bbbd401f8c17fb90876323fd669554718012a5ea507bb5d61e6af46f3eb56c953a4be722608e46f3d1b6ae024de386f02e0a2e1529d704e939f9570cffd7992d8b10ff6b32cc689108f1d3059735549f0aa98546e8baef2051095730bed6302a09253fde2b9312ef6370bcf3d28b35b71ca437e26cb5b635b37e9adfc72f766adfb004891bda0fa7c40b9a467ab1803713e2b1787690366c3b6f42216b2ce448f084f5cbe8fda72a845a7223bd2b214b418fd6351a2c1cb6ae8e0f28271a341b4ed7e281b798d3c1fd3a8a85548892302ff5c659536bc96d05a72230b2bef46510eb0e9f8f6262fda17c9584677407d27565efc6507618ab22c1936a60f3ad0456d0c3a3159dcbde1c96ebdd628a8ae65145c7f420f6853ab95c2ec09db3b6123a8635825c98b046fc8d2837a3490beb3baf4b835f7e66d78d21c50b6eff1189c999f20c55e55a765b514042a3d21403cbfb4f072b2b02fb8764561e1a5f04bf2d59d87adeade66bdbcf16a54c8a6d9129ad0044f8d088eb8dddfc71cb7342d03749574b6651e568fbee98fac4958b053f13308fa61df5f03c924837a335be5d12bc0a90152473ee07d3339bed8b571831bf0500efc878713e10efc88dca1faa1dc2a2fef807764e1b3afe2504626f16a6edf6356bc828c91e433e3bff5b6f1b95cdc0d1b04e9b029b2acd6992970bf2dd47511ced40e342a37894e1329a3ca73ed1f4770e82e79d9fc6c3f05b7a09eacd73a2ba0127ab944c6fb9df1490dbe46b65990c08a396ebc9810dd3e8bdaf9a24e76957421703ca78ffbddee8b27c62c3a0071d4ef4ecfed4ee151341da7f79c67846c8b7eb2dd2f026b1bf69b70a667e7e4bdbe2cf55f74a4e4c786020714d7ac129d14d71186e908defeb82c9b6aeac899da8fa5611b3ced70171a2419a0af34d661110ca5048ccce8fcfe1769406b247b7f9fc6ccee81f29d49bdd793ec266c3dd7e966d3196931deb30e444281a4e520840c09a3536f6a98ce4d9513e7354164712edfcac7909007b5a0f2e4abd9675fcdc146f2cfef114f6c8c849ad2caba998bb1b648007fc98c6552f357ffa682ca4a433f4c67bd53c3c4cae46034b03af55456d94edb127502b0f52ab1c850e5fcdc3f4be200d1e5d88097a48ab34bb4d15715c8a15245d9cc0520cded3a90457375e6aa161ee58244424c737fb5128fe7c4c3c13994de626cc8cab1dc22f853b207643bf8ea6d8b07a49011920423d859841c9d2fac8612493d5786203fe49129d146ba6e65af6d737a4700ff5c06432e66aa9e9c8ba33aa6013c332180d3741582c9c19210637cd8fda29d33a518f8773cc2e9e80929be10eb741ba9ab95d55d15147275256368260a0f2040f5ad089593657a1cb4b2f30b3a588a2d7f1398591325a1f499a42fcf80c6f1600478134dfbc3a2e6ca468bbabee98805fafc27976ed649b54ee30a1c28fe553ec8ece9b79d55534b25268be2e8a5176f1daca3107798133c97742d262be83b6b52372af81fa487b453f921b52bf855ae5d503f2e9ba6b9c16abfe14ab2289e917544c9f762eb09742e9154ac692f632a89d839b5233cca3bd0573db2d9d4685fcb5a2fafcfc50952a08b1132fc38d7b7d392dae54e531dbf319eb6cd733f8c0a5ef25b52e8c75535cf4b53bb725af3cc3aed7098da7f504f53f0ca83937682f1d0eb4850afe74fc5a10482f62d818c94c1d8561115157ce5067e27ae5b4210cdbc2b1977f9f120254cdf4cefc62545d867b1d7f9bbb1816ecdce00d8aa80d63ddfb1793affca3c6f7f76ef979850383767822d7ca8611d316d636c75bcf7d46929c85b22d3c6bd81b2574812f23c90b136aec9458287d0f62d33d9c3069c12174e3b1855a190bb17a142e671abf74676fd57b762c881868af5e3ffa9aa9d1af65962f5aa617f017c93fe7675bc0364afbcbdd</script>
+</div>
+<script src="/lib/blog-encrypt.js"></script><link href="/css/blog-encrypt.css" rel="stylesheet" type="text/css">
       
 
       
@@ -256,11 +222,11 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">nowcoder</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">hide</a>
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">BUCTOJ</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">diary</a>
         		</li>
       		
 		</ul>
@@ -316,7 +282,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://yeeby2019.github.io/2020/03/19/NC50169-钓鱼/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yeeby2019.github.io/2020/03/29/D-2020-3-29/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -330,18 +296,9 @@
   
 <nav id="article-nav">
   
-    <a href="/2020/03/21/LeetCode-面试题40-最小的k个数/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          LeetCode:面试题40 最小的k个数
-        
-      </div>
-    </a>
   
-  
-    <a href="/2020/03/15/Atcoder-Panasonic-Programming-Contest-2020-D-String-Equivalence/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">Atcoder Panasonic Programming Contest 2020:D String Equivalence</div>
+    <a href="/2020/03/25/随笔-1/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">随笔-1</div>
       <i class="icon-circle-right"></i>
     </a>
   
