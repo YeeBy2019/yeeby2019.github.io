@@ -15,7 +15,7 @@
 <meta property="og:site_name" content="欢迎！">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="http://yeeby2019.github.io/2020/12/01/AtCoder-Beginner-Contest-180/ti.png">
-<meta property="og:updated_time" content="2020-12-01T14:46:55.931Z">
+<meta property="og:updated_time" content="2020-12-02T10:53:34.819Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="AtCoder Beginner Contest 180">
 <meta name="twitter:image" content="http://yeeby2019.github.io/2020/12/01/AtCoder-Beginner-Contest-180/ti.png">
@@ -203,6 +203,13 @@
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="keyword">typedef</span> <span class="keyword">long</span> <span class="keyword">long</span> ll;</span><br><span class="line">ll x,y,a,b;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">solve</span><span class="params">()</span></span>&#123;</span><br><span class="line">	<span class="built_in">scanf</span>(<span class="string">"%lld %lld %lld %lld"</span>,&amp;x,&amp;y,&amp;a,&amp;b);</span><br><span class="line">	ll cnt = <span class="number">0</span>;</span><br><span class="line">	<span class="keyword">while</span>(((x*a) &lt; (x+b)) &amp;&amp; ((x*a) &lt; y))&#123;</span><br><span class="line">		x*=a;</span><br><span class="line">		cnt++;</span><br><span class="line">	&#125;</span><br><span class="line">	cnt += (y<span class="number">-1</span>-x)/b;</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"%lld"</span>,cnt);</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	solve();</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <p>这俩判断条件不一样？？？嗯 ? EXM ?</p>
+<hr>
+<p>Update：</p>
+<p>​    我的代码在判断条件的时候， x * a 有溢出的风险，例如样例:</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">999999999999999999</span> <span class="number">1000000000000000000</span> <span class="number">1000000000</span> <span class="number">1000000000</span></span><br></pre></td></tr></table></figure>
+
+<p>​    在判断时， x * a 会变成 -6930898828444486144 进行判断，这样就错了。</p>
+<hr>
 
       
 
