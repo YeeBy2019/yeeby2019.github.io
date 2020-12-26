@@ -6,17 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://yeeby2019.github.io">
-  <title>Codeforces Round #628(div 2):B CopyCopyCopyCopyCopy | 欢迎！</title>
+  <title>ACL Beginner Contest | 欢迎！</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="keywords" content="Codeforces">
+  <meta name="description" content="求连通块个数">
+<meta name="keywords" content="Atcoder">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Codeforces Round #628(div 2):B CopyCopyCopyCopyCopy">
-<meta property="og:url" content="http://yeeby2019.github.io/2020/03/15/Codeforces-Round-628-div-2-B-CopyCopyCopyCopyCopy/index.html">
+<meta property="og:title" content="ACL Beginner Contest">
+<meta property="og:url" content="http://yeeby2019.github.io/2020/12/26/ACL-Beginner-Contest/index.html">
 <meta property="og:site_name" content="欢迎！">
+<meta property="og:description" content="求连通块个数">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2020-12-26T12:43:34.681Z">
+<meta property="og:updated_time" content="2020-12-26T13:18:42.772Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Codeforces Round #628(div 2):B CopyCopyCopyCopyCopy">
+<meta name="twitter:title" content="ACL Beginner Contest">
+<meta name="twitter:description" content="求连通块个数">
   
     <link rel="alternative" href="/atom.xml" title="欢迎！" type="application/atom+xml">
   
@@ -156,20 +159,20 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-Codeforces-Round-628-div-2-B-CopyCopyCopyCopyCopy" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-ACL-Beginner-Contest" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      Codeforces Round #628(div 2):B CopyCopyCopyCopyCopy
+      ACL Beginner Contest
     </h1>
   
 
         
-        <a href="/2020/03/15/Codeforces-Round-628-div-2-B-CopyCopyCopyCopyCopy/" class="archive-article-date">
-  	<time datetime="2020-03-15T09:44:56.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-03-15</time>
+        <a href="/2020/12/26/ACL-Beginner-Contest/" class="archive-article-date">
+  	<time datetime="2020-12-26T12:43:02.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-12-26</time>
 </a>
         
       </header>
@@ -178,27 +181,19 @@
       
         <br>
 
+<p>求连通块个数</p>
 <a id="more"></a>
 
-<h2 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h2><p>给定一个长度为 n 的数组 a，可对此数组进行无限多次的复制粘贴来加长数组，要求找出新数组的最长的<u>增长</u>子数列(subsequence)，输出它的长度。</p>
-<p><em>注：subsequence指一个数列中去除几个(可能是零个或全部)元素得到的新数列</em></p>
-<blockquote>
-<p>1≤n≤10<sup>5</sup></p>
-<p>1≤a<sub>i</sub>≤10<sup>9</sup></p>
-</blockquote>
-<p>测试样例中的n的总和不超过10<sup>5</sup></p>
 <hr>
-<h2 id="样例输入1"><a href="#样例输入1" class="headerlink" title="样例输入1"></a>样例输入1</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">2</span><br><span class="line">3</span><br><span class="line">3 2 1</span><br><span class="line">6</span><br><span class="line">3 1 4 1 5 9</span><br></pre></td></tr></table></figure>
-
-<h2 id="样例输出1"><a href="#样例输出1" class="headerlink" title="样例输出1"></a>样例输出1</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">3</span><br><span class="line">5</span><br></pre></td></tr></table></figure>
-
+<h2 id="C-Connect-Cities"><a href="#C-Connect-Cities" class="headerlink" title="C - Connect Cities"></a><strong>C - Connect Cities</strong></h2><p>​    n 个城市，m条双向道路，问至少再建几条路使得 n 个城市形成一个连通图</p>
 <hr>
-<p>这道题目要找最长增长子数列的长度，首先我们意识到，由已知数列无限次复制粘贴后得到的新数列，因为它足够长，所以最后每个数字都会出现在最后找到的最长增长子数列中，又因为时最长增长子数列，所以子数列中的数是distinct的（各不相同），所以最后找到的最长增长子数列就相当于对原数列的排序+去重，又因为题目只要求输出长度，我们只需要统计出原数列有几个不同的数字，输出就结束了。</p>
-<p>由这道题目的特性，我们可以借助set容器来快速完成我们想要达到的效果。</p>
-<p>代码如下：</p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> t;</span><br><span class="line">	<span class="built_in">cin</span>&gt;&gt;t;</span><br><span class="line">	<span class="keyword">int</span> n;</span><br><span class="line">	<span class="keyword">while</span>(t--)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="built_in">set</span>&lt;<span class="keyword">int</span>&gt; s;</span><br><span class="line">		<span class="built_in">cin</span>&gt;&gt;n;</span><br><span class="line">		<span class="keyword">int</span> a;</span><br><span class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;n;i++)</span><br><span class="line">		&#123;</span><br><span class="line">			<span class="built_in">cin</span>&gt;&gt;a;</span><br><span class="line">			s.insert(a);</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="built_in">cout</span>&lt;&lt;s.size()&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>求连通块个数 - 1，跑个dfs就行，或者用并查集维护</p>
+<p>Code1:</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="keyword">typedef</span> <span class="keyword">long</span> <span class="keyword">long</span> ll;</span><br><span class="line"><span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; edge[<span class="number">100005</span>];</span><br><span class="line"><span class="keyword">bool</span> bo[<span class="number">100005</span>];</span><br><span class="line"><span class="keyword">int</span> ans;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">dye</span><span class="params">(<span class="keyword">int</span> k)</span></span>&#123;</span><br><span class="line">	bo[k] = <span class="number">1</span>;</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>;i&lt;edge[k].size();i++)&#123;</span><br><span class="line">		<span class="keyword">if</span>(bo[edge[k][i]] == <span class="number">0</span>)dye(edge[k][i]);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">solve</span><span class="params">()</span></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> n,m;</span><br><span class="line">	<span class="built_in">scanf</span>(<span class="string">"%d %d"</span>,&amp;n,&amp;m);</span><br><span class="line">	<span class="keyword">int</span> x,y;</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">1</span>;i&lt;=m;i++)&#123;</span><br><span class="line">		<span class="built_in">scanf</span>(<span class="string">"%d %d"</span>,&amp;x,&amp;y);</span><br><span class="line">		edge[x].push_back(y);</span><br><span class="line">		edge[y].push_back(x);</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="built_in">memset</span>(bo,<span class="number">0</span>,<span class="keyword">sizeof</span>(bo));</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">1</span>;i&lt;=n;i++)&#123;</span><br><span class="line">		<span class="keyword">if</span>(bo[i] == <span class="number">0</span>)&#123;</span><br><span class="line">			ans ++;</span><br><span class="line">			dye(i);</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"%d"</span>,ans<span class="number">-1</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	solve();</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<p>2020.03.15 18:44</p>
+<p>Code2:</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="keyword">typedef</span> <span class="keyword">long</span> <span class="keyword">long</span> ll;</span><br><span class="line"><span class="keyword">int</span> parent[<span class="number">100005</span>];</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">find</span><span class="params">(<span class="keyword">int</span> x)</span></span>&#123;</span><br><span class="line">	<span class="keyword">return</span> x == parent[x] ? x : parent[x] = find(parent[x]);</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">solve</span><span class="params">()</span></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> n,m;</span><br><span class="line">	<span class="built_in">scanf</span>(<span class="string">"%d %d"</span>,&amp;n,&amp;m);</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">1</span>;i&lt;=n;i++)parent[i] = i;</span><br><span class="line">	<span class="keyword">int</span> a,b;</span><br><span class="line">	<span class="keyword">while</span>(m--)&#123;</span><br><span class="line">		<span class="built_in">scanf</span>(<span class="string">"%d %d"</span>,&amp;a,&amp;b);</span><br><span class="line">        <span class="comment">//int x = find(a);</span></span><br><span class="line">        <span class="comment">//int y = find(b);</span></span><br><span class="line">        <span class="comment">//parent[y] = x;		//和下面那一句一样的，目的就是合并两个结点的根，怎么写都行</span></span><br><span class="line">		parent[find(a)] = find(b);</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">int</span> ans = <span class="number">0</span>;</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">1</span>;i&lt;=n;i++)&#123;</span><br><span class="line">		<span class="keyword">if</span>(i == parent[i])ans++;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"%d"</span>,ans<span class="number">-1</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	solve();</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
 
       
 
@@ -238,7 +233,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Codeforces</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">Atcoder</a>
         		</li>
       		
 		</ul>
@@ -294,7 +289,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://yeeby2019.github.io/2020/03/15/Codeforces-Round-628-div-2-B-CopyCopyCopyCopyCopy/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yeeby2019.github.io/2020/12/26/ACL-Beginner-Contest/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -308,18 +303,9 @@
   
 <nav id="article-nav">
   
-    <a href="/2020/03/15/Atcoder-Panasonic-Programming-Contest-2020-D-String-Equivalence/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          Atcoder Panasonic Programming Contest 2020:D String Equivalence
-        
-      </div>
-    </a>
   
-  
-    <a href="/2020/03/15/Codeforces-Round-628-div-2-A-EhAb-AnD-gCd/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">Codeforces Round #628(div 2):A EhAb AnD gCd</div>
+    <a href="/2020/12/22/Panasonic-Programming-Contest-AtCoder-Beginner-Contest-186/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Panasonic Programming Contest (AtCoder Beginner Contest 186)</div>
       <i class="icon-circle-right"></i>
     </a>
   
