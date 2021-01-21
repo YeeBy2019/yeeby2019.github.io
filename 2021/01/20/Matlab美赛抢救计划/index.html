@@ -19,7 +19,7 @@
 <meta property="og:image" content="https://yeeby2019.gitee.io/2021/01/20/Matlab美赛抢救计划/figure1.png">
 <meta property="og:image" content="https://yeeby2019.gitee.io/2021/01/20/Matlab美赛抢救计划/figure2.png">
 <meta property="og:image" content="https://yeeby2019.gitee.io/2021/01/20/Matlab美赛抢救计划/figure3.png">
-<meta property="og:updated_time" content="2021-01-21T09:00:37.838Z">
+<meta property="og:updated_time" content="2021-01-21T09:54:55.348Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Matlab美赛抢救计划">
 <meta name="twitter:description" content="导语学不完了学不完了学不完了 https://www.icourse163.org/learn/CSU-1002475002?tid=1460970453#/learn/announce">
@@ -346,7 +346,13 @@
 <p>​    用于显示在MATLAB空间中已经驻留的变量名清单，其中 who 只给出变量名，而 whos 会给出变量名，变量大小，所占字节数以及数据类型等信息</p>
 <p>（3）内存变量文件</p>
 <p>​    用于保存 MATLAB工作区变量的文件叫做内存变量文件，其扩展名为.mat，也叫MAT文件</p>
+<ul>
+<li>save 命令：创建内存变量文件</li>
+<li>load 命令：装入内存变量文件</li>
+</ul>
+<figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt; save mydata a x	<span class="comment">%将变量a和x保存在mydata。mat文件中</span></span><br><span class="line">&gt;&gt; load mydata		<span class="comment">%将mydata.mat文件中的内容装入MATLAB工作空间</span></span><br></pre></td></tr></table></figure>
 
+<h2 id="1-4-MATLAB矩阵的表示"><a href="#1-4-MATLAB矩阵的表示" class="headerlink" title="1.4 MATLAB矩阵的表示"></a>1.4 MATLAB矩阵的表示</h2>
       
 
       
@@ -624,15 +630,15 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">数学建模美赛</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">nowcoder</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">BUCTOJ</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">数学建模美赛</a>
               </li>
              
               <li class="article-tag-list-item">
