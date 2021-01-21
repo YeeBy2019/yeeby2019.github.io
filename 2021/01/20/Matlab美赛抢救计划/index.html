@@ -5,25 +5,25 @@
   
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <link rel="dns-prefetch" href="https://yeeby2019.github.io">
+  <link rel="dns-prefetch" href="https://yeeby2019.gitee.io">
   <title>Matlab美赛抢救计划 | 欢迎！</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="导语学不完了学不完了学不完了 https://www.icourse163.org/learn/CSU-1002475002?tid=1460970453#/learn/announce">
 <meta name="keywords" content="数学建模美赛">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Matlab美赛抢救计划">
-<meta property="og:url" content="https://yeeby2019.github.io/2021/01/20/Matlab美赛抢救计划/index.html">
+<meta property="og:url" content="https://yeeby2019.gitee.io/2021/01/20/Matlab美赛抢救计划/index.html">
 <meta property="og:site_name" content="欢迎！">
 <meta property="og:description" content="导语学不完了学不完了学不完了 https://www.icourse163.org/learn/CSU-1002475002?tid=1460970453#/learn/announce">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="https://yeeby2019.github.io/2021/01/20/Matlab美赛抢救计划/figure1.png">
-<meta property="og:image" content="https://yeeby2019.github.io/2021/01/20/Matlab美赛抢救计划/figure2.png">
-<meta property="og:image" content="https://yeeby2019.github.io/2021/01/20/Matlab美赛抢救计划/figure3.png">
-<meta property="og:updated_time" content="2021-01-20T15:46:28.782Z">
+<meta property="og:image" content="https://yeeby2019.gitee.io/2021/01/20/Matlab美赛抢救计划/figure1.png">
+<meta property="og:image" content="https://yeeby2019.gitee.io/2021/01/20/Matlab美赛抢救计划/figure2.png">
+<meta property="og:image" content="https://yeeby2019.gitee.io/2021/01/20/Matlab美赛抢救计划/figure3.png">
+<meta property="og:updated_time" content="2021-01-21T08:44:12.840Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Matlab美赛抢救计划">
 <meta name="twitter:description" content="导语学不完了学不完了学不完了 https://www.icourse163.org/learn/CSU-1002475002?tid=1460970453#/learn/announce">
-<meta name="twitter:image" content="https://yeeby2019.github.io/2021/01/20/Matlab美赛抢救计划/figure1.png">
+<meta name="twitter:image" content="https://yeeby2019.gitee.io/2021/01/20/Matlab美赛抢救计划/figure1.png">
   
     <link rel="alternative" href="/atom.xml" title="欢迎！" type="application/atom+xml">
   
@@ -314,6 +314,31 @@
 </ul>
 <figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt; x=<span class="number">1</span>:<span class="number">100</span>;</span><br><span class="line">&gt;&gt; k=<span class="built_in">isprime</span>(x);</span><br><span class="line">&gt;&gt; k1=<span class="built_in">find</span>(k);</span><br><span class="line">&gt;&gt; p=x(k1)</span><br><span class="line">p =</span><br><span class="line">	<span class="number">1</span> 至 <span class="number">15</span> 列</span><br><span class="line">		<span class="number">2</span>	<span class="number">3</span>	<span class="number">5</span>	<span class="number">7</span>	<span class="number">11</span>	<span class="number">13</span>	<span class="number">17</span>	<span class="number">19</span>	<span class="number">23</span>	<span class="number">29</span>	<span class="number">31</span>	<span class="number">37</span>	<span class="number">41</span>	<span class="number">43</span>	<span class="number">47</span></span><br><span class="line">	<span class="number">16</span> 至 <span class="number">25</span> 列</span><br><span class="line">	   <span class="number">53</span>  <span class="number">59</span>  <span class="number">61</span>  <span class="number">67</span>   <span class="number">71</span>	<span class="number">73</span>	<span class="number">79</span>	<span class="number">83</span>	<span class="number">89</span>	<span class="number">97</span></span><br></pre></td></tr></table></figure>
 
+<h2 id="1-3-变量及其操作"><a href="#1-3-变量及其操作" class="headerlink" title="1.3 变量及其操作"></a>1.3 变量及其操作</h2><h3 id="MATLAB变量命名规则"><a href="#MATLAB变量命名规则" class="headerlink" title="MATLAB变量命名规则"></a>MATLAB变量命名规则</h3><ul>
+<li><p><strong>以字母开头</strong>，后接字母、数字或下划线的字符序列、最多63个字符</p>
+</li>
+<li><p>变量名大小写敏感</p>
+</li>
+</ul>
+<hr>
+<h3 id="变量的赋值"><a href="#变量的赋值" class="headerlink" title="变量的赋值"></a>变量的赋值</h3><p>赋值语句两种格式：</p>
+<ul>
+<li>变量 = 表达式</li>
+<li>表达式 （赋给MATLAB的预定义变量 ans）</li>
+</ul>
+<p>注：如果在赋值语句的最后加分号，那么MATLAB仅执行赋值操作，不会打印运算后变量的结果</p>
+<p>例：计算表达式$\frac{5+cos47°}{1+|x-y|}$的值，并将结果赋给变量 z ，然后显示计算结果。</p>
+<p>其中， $x=sqrt(7)-2i,y=e^{\frac{π}{2}}$</p>
+<figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt; x=<span class="built_in">sqrt</span>(<span class="number">7</span>)<span class="number">-2</span><span class="built_in">i</span>;</span><br><span class="line">&gt;&gt; y=<span class="built_in">exp</span>(<span class="built_in">pi</span>/<span class="number">2</span>);</span><br><span class="line">&gt;&gt; z=(<span class="number">5</span>+<span class="built_in">cosd</span>(<span class="number">47</span>))/(<span class="number">1</span>+<span class="built_in">abs</span>(x-y))</span><br><span class="line">z = </span><br><span class="line">	<span class="number">1.4395</span></span><br></pre></td></tr></table></figure>
+
+<hr>
+<h3 id="预定义变量"><a href="#预定义变量" class="headerlink" title="预定义变量"></a>预定义变量</h3><p>预定义变量是由系统本身定义的变量</p>
+<ul>
+<li>ans 是默认赋值变量</li>
+<li>i 和 j 代表虚数单位</li>
+<li>pi 代表圆周率</li>
+<li>NaN 代表非数（在绘图时若想裁掉其中一部分，那么只要把要裁掉的坐标数据设位NaN就可以了）</li>
+</ul>
 
       
 
@@ -409,7 +434,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=https://yeeby2019.github.io/2021/01/20/Matlab美赛抢救计划/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=https://yeeby2019.gitee.io/2021/01/20/Matlab美赛抢救计划/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -580,10 +605,6 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">LeetCode</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">diary</a>
               </li>
              
@@ -592,11 +613,11 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">数学建模美赛</a>
+                <a href="javascript:void(0)" class="js-tag color4">LeetCode</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
+                <a href="javascript:void(0)" class="js-tag color2">数学建模美赛</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -605,6 +626,10 @@ MathJax.Hub.Queue(function() {
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">BUCTOJ</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
               </li>
              
               <li class="article-tag-list-item">
