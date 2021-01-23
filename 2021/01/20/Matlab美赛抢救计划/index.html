@@ -19,7 +19,7 @@
 <meta property="og:image" content="https://yeeby2019.gitee.io/2021/01/20/Matlab美赛抢救计划/figure1.png">
 <meta property="og:image" content="https://yeeby2019.gitee.io/2021/01/20/Matlab美赛抢救计划/figure2.png">
 <meta property="og:image" content="https://yeeby2019.gitee.io/2021/01/20/Matlab美赛抢救计划/figure3.png">
-<meta property="og:updated_time" content="2021-01-21T15:05:42.053Z">
+<meta property="og:updated_time" content="2021-01-23T05:27:11.361Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Matlab美赛抢救计划">
 <meta name="twitter:description" content="导语学不完了学不完了学不完了 https://www.icourse163.org/learn/CSU-1002475002?tid=1460970453#/learn/announce">
@@ -381,7 +381,141 @@
 <p>​            A(3,2) 表示 A 矩阵第 3 行第 2 列的元素</p>
 <figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt; A=[<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>;<span class="number">4</span>,<span class="number">5</span>,<span class="number">6</span>];</span><br><span class="line">&gt;&gt; A(<span class="number">4</span>,<span class="number">5</span>)=<span class="number">10</span></span><br><span class="line">A = 	</span><br><span class="line">	<span class="number">1</span>	<span class="number">2</span>	<span class="number">3</span>	<span class="number">0</span>	<span class="number">0</span></span><br><span class="line">	<span class="number">4</span>	<span class="number">5</span>	<span class="number">6</span>	<span class="number">0</span>	<span class="number">0</span></span><br><span class="line">	<span class="number">0</span>	<span class="number">0</span>	<span class="number">0</span>	<span class="number">0</span>	<span class="number">0</span></span><br><span class="line">	<span class="number">0</span>	<span class="number">0</span>	<span class="number">0</span>	<span class="number">0</span>  <span class="number">10</span></span><br></pre></td></tr></table></figure>
 
+<hr>
+<hr>
+<p>感觉这么学学习效率好低啊，回过头来一看这些东西根本用不上半个小时就能理解了，为啥花了这么久。。。</p>
+<hr>
+<hr>
+<p>2.函数</p>
+<ul>
+<li>数学函数</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>函数名</th>
+<th>含义</th>
+<th>函数名</th>
+<th>含义</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>abs(x)</td>
+<td>x的绝对值</td>
+<td>atan(x)</td>
+<td>x的反正切</td>
+</tr>
+<tr>
+<td>sqrt(x)</td>
+<td>x的平方根</td>
+<td>cot(x)</td>
+<td>x的余切</td>
+</tr>
+<tr>
+<td>exp(x)</td>
+<td>e的x次方</td>
+<td>acot(x)</td>
+<td>x的反余弦</td>
+</tr>
+<tr>
+<td>sin(x)</td>
+<td>x的正弦</td>
+<td>log(x)</td>
+<td>x的自然对数</td>
+</tr>
+<tr>
+<td>cos(x)</td>
+<td>x的余弦</td>
+<td>log10(x)</td>
+<td>x的常用对数</td>
+</tr>
+<tr>
+<td>asin(x)</td>
+<td>x的反正弦</td>
+<td>sinh(x)</td>
+<td>双曲正弦</td>
+</tr>
+<tr>
+<td>acos(x)</td>
+<td>x的反余弦</td>
+<td>cosh(x)</td>
+<td>双曲余弦</td>
+</tr>
+<tr>
+<td>tan(x)</td>
+<td>x的正切</td>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<ul>
+<li><p>机器函数</p>
+<p>① pause        程序将暂时停在该函数所在位置，击任意键程序继续执行</p>
+<p>② echo on    在命令窗口显示正在执行的程序指令</p>
+<p>③ cputime    给出 MATLAB 所耗用的总机器时间</p>
+<p>④ clock        给出日期及当前时间</p>
+</li>
+<li><p>通过函数创建矩阵</p>
+<table>
+<thead>
+<tr>
+<th>函数</th>
+<th>功能</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>eye(n)</td>
+<td>产生n阶单位矩阵</td>
+</tr>
+<tr>
+<td>ones(m,n)</td>
+<td>产生m*n矩阵，元素都是“1”</td>
+</tr>
+<tr>
+<td>zeros(m,n)</td>
+<td>产生m*n矩阵，元素都是“0”</td>
+</tr>
+<tr>
+<td>[]</td>
+<td>产生空矩阵</td>
+</tr>
+</tbody></table>
+</li>
+</ul>
+<p>冒号法构造矩阵</p>
+<p>一般格式为：</p>
+<p>A(:.j):表示矩阵A的第j列</p>
+<p>A(i.:):表示矩阵A的第i行</p>
+<figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt; A(<span class="number">1.</span>:)=<span class="number">1</span>:<span class="number">5</span>		<span class="comment">%设置矩阵的第1行</span></span><br><span class="line">A =</span><br><span class="line">	<span class="number">1</span>	<span class="number">2</span>	<span class="number">3</span>	<span class="number">4</span>	<span class="number">5</span></span><br></pre></td></tr></table></figure>
 
+<p>在MATLAB中，除了 矩阵 还有一种数据结构是 数组，它与矩阵的区别就是数组的运算不符合线性代数的规定，而实元素对元素间的运算，数组的加减与矩阵的加减相同，但是数组的乘法，左除，右除，幂的运算符号需要在运算符之前加一个小圆点 “.”</p>
+<p>矩阵运算的一个重要应用是解线性方程组</p>
+<p>①矩阵的转置：A’</p>
+<p>②矩阵的幂：A^2</p>
+<p>③矩阵的逆：inv(A)</p>
+<p>④A<sup>-1</sup>B=A\B 或 inv(A)*B</p>
+<p>例：求下面方程组的根：</p>
+<ul>
+<li>$2x1+x2-3x3=5$</li>
+<li>$3x1-2x2+2x3=5$</li>
+<li>$5x1-3x2-x3=16$</li>
+</ul>
+<figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt; A=[<span class="number">2</span>,<span class="number">1</span>,<span class="number">-3</span>;<span class="number">3</span>,<span class="number">-2</span>,<span class="number">2</span>;<span class="number">5</span>,<span class="number">-3</span>,<span class="number">-1</span>];</span><br><span class="line">&gt;&gt; B=[<span class="number">5</span>;<span class="number">5</span>;<span class="number">16</span>]</span><br><span class="line">&gt;&gt; X=A\B</span><br><span class="line">X =</span><br><span class="line">	<span class="number">1</span></span><br><span class="line">	<span class="number">-3</span></span><br><span class="line">	<span class="number">-2</span></span><br></pre></td></tr></table></figure>
+
+<p>已知$f(x) = ax^2+bx+c$,求$f(x)$的微分和积分</p>
+<figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt; syms a b c x</span><br><span class="line">&gt;&gt; f = sym(<span class="string">'a*x^2+b*x+c'</span>)</span><br><span class="line">f = </span><br><span class="line">	a*x^<span class="number">2</span>+b*x+c</span><br><span class="line">&gt;&gt; diff(f,a)</span><br><span class="line"><span class="built_in">ans</span> = </span><br><span class="line">	x^<span class="number">2</span></span><br><span class="line">&gt;&gt; int(f)</span><br><span class="line"><span class="built_in">ans</span> = </span><br><span class="line">	<span class="number">1</span>/<span class="number">3</span>*a*x^<span class="number">3</span>+<span class="number">1</span>/<span class="number">2</span>*b*x^<span class="number">2</span>+c*x</span><br><span class="line">&gt;&gt; int(f,x,<span class="number">0</span>,<span class="number">2</span>)</span><br><span class="line"><span class="built_in">ans</span> =</span><br><span class="line">	<span class="number">8</span>/<span class="number">3</span>*a+<span class="number">2</span>*b+<span class="number">2</span>*c</span><br></pre></td></tr></table></figure>
+
+<h3 id="符号微积分"><a href="#符号微积分" class="headerlink" title="符号微积分"></a>符号微积分</h3><ul>
+<li>limit(f,x,a)    求x→a的极限</li>
+<li>diff(f)             求表达式 f 对缺省变量的微分</li>
+<li>diff(f,n)          求表达式 f 对缺省变量求 n 阶微分</li>
+<li>diff(f,v)           求表达式 f 对变量 v 的微分</li>
+<li>diff(f,v,n)        求表达式 f 对变量 v 的 n 阶微分</li>
+<li>int(f)                求表达式 f 对缺省变量的积分</li>
+<li>int(f,v)              求表达式 f 对变量 v 的积分</li>
+<li>int(f,v,a,b)        求表达式 f 在区间（a，b）上对变量 v 的定积分</li>
+</ul>
+<h2 id="四、MATLAB图形处理"><a href="#四、MATLAB图形处理" class="headerlink" title="四、MATLAB图形处理"></a>四、MATLAB图形处理</h2>
       
 
       
@@ -489,6 +623,15 @@
 
   
 <nav id="article-nav">
+  
+    <a href="/2021/01/23/AtCoder-Beginner-Contest-189/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          AtCoder Beginner Contest 189
+        
+      </div>
+    </a>
   
   
     <a href="/2021/01/19/寒假集训-STL/" id="article-nav-older" class="article-nav-link-wrap">
