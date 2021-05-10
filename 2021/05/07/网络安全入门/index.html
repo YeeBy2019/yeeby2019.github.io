@@ -16,7 +16,7 @@
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="https://yeeby2019.github.io/2021/05/07/网络安全入门/a.png">
 <meta property="og:image" content="https://yeeby2019.github.io/2021/05/07/网络安全入门/b.png">
-<meta property="og:updated_time" content="2021-05-08T15:48:12.164Z">
+<meta property="og:updated_time" content="2021-05-09T14:52:59.501Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="网络安全入门">
 <meta name="twitter:image" content="https://yeeby2019.github.io/2021/05/07/网络安全入门/a.png">
@@ -377,6 +377,26 @@
 <li>纯CSS漏洞很少</li>
 <li><a href="https://github.com/maxchehab/CSS-Keylogging" target="_blank" rel="noopener">https://github.com/maxchehab/CSS-Keylogging</a> （键盘监控）</li>
 </ul>
+<h2 id="5、初识JavaScript和潜在漏洞"><a href="#5、初识JavaScript和潜在漏洞" class="headerlink" title="5、初识JavaScript和潜在漏洞"></a>5、初识JavaScript和潜在漏洞</h2><h3 id="什么是JavaScript"><a href="#什么是JavaScript" class="headerlink" title="什么是JavaScript"></a>什么是JavaScript</h3><ul>
+<li>JavaScript是一种脚本，一门编程语言，它可以在网页上实现复杂的功能，网页展现给你的不再是简单的静态信息，而是实时的内容更新，交互式的地图，2D/3D动画，滚动播放的视频等等</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">&lt;html&gt;</span><br><span class="line">    &lt;head&gt;</span><br><span class="line">    	&lt;title&gt;</span><br><span class="line">    		This is Title</span><br><span class="line">        &lt;<span class="regexp">/title&gt;</span></span><br><span class="line"><span class="regexp">		&lt;!-- CSS --&gt;</span></span><br><span class="line"><span class="regexp">    &lt;/</span>head&gt;</span><br><span class="line"></span><br><span class="line">	&lt;body&gt;</span><br><span class="line">        &lt;p&gt;javascript&lt;<span class="regexp">/p&gt;</span></span><br><span class="line"><span class="regexp">	&lt;/</span>body&gt;</span><br><span class="line">	&lt;script&gt;</span><br><span class="line">        alert(<span class="string">"js"</span>);</span><br><span class="line">	&lt;<span class="regexp">/script&gt;</span></span><br><span class="line"><span class="regexp">&lt;/</span>html&gt;</span><br></pre></td></tr></table></figure>
+
+<h3 id="为什么学JavaScript"><a href="#为什么学JavaScript" class="headerlink" title="为什么学JavaScript"></a>为什么学JavaScript</h3><ul>
+<li>基础、网页必备</li>
+<li><del>js漏洞多</del></li>
+</ul>
+<h3 id="开发JavaScript"><a href="#开发JavaScript" class="headerlink" title="开发JavaScript"></a>开发JavaScript</h3><h3 id="JavaScript能做什么"><a href="#JavaScript能做什么" class="headerlink" title="JavaScript能做什么"></a>JavaScript能做什么</h3><ul>
+<li>文件操作</li>
+<li>HTML操作</li>
+<li>DOM操作</li>
+<li>Cookie操作</li>
+<li>数据操作</li>
+</ul>
+<h3 id="JavaScript潜在漏洞"><a href="#JavaScript潜在漏洞" class="headerlink" title="JavaScript潜在漏洞"></a>JavaScript潜在漏洞</h3><ul>
+<li>纯JavaScript漏洞很多</li>
+<li>XSS</li>
+</ul>
 
       
 
@@ -485,6 +505,15 @@
 
   
 <nav id="article-nav">
+  
+    <a href="/2021/05/09/使用Docker容器搭建各种漏洞环境/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          使用Docker容器搭建各种漏洞环境
+        
+      </div>
+    </a>
   
   
     <a href="/2021/04/28/Java从进阶到入门/" id="article-nav-older" class="article-nav-link-wrap">
@@ -643,6 +672,10 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">Java</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">diary</a>
               </li>
              
@@ -651,11 +684,7 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">Java</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">LeetCode</a>
+                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -667,7 +696,11 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
+                <a href="javascript:void(0)" class="js-tag color4">LeetCode</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">网络安全</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -683,7 +716,7 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">网络安全</a>
+                <a href="javascript:void(0)" class="js-tag color3">算法设计与分析</a>
               </li>
             
             <div class="clearfix"></div>
