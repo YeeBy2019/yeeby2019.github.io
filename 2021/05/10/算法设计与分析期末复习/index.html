@@ -9,17 +9,20 @@
   <title>算法设计与分析期末复习 | 欢迎！</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="彭四伟好有气质(ˉ﹃ˉ)">
-<meta name="keywords" content="算法设计与分析">
+<meta name="keywords" content="本科课程">
 <meta property="og:type" content="article">
 <meta property="og:title" content="算法设计与分析期末复习">
 <meta property="og:url" content="https://yeeby2019.github.io/2021/05/10/算法设计与分析期末复习/index.html">
 <meta property="og:site_name" content="欢迎！">
 <meta property="og:description" content="彭四伟好有气质(ˉ﹃ˉ)">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2021-05-10T13:33:28.873Z">
+<meta property="og:image" content="https://yeeby2019.github.io/2021/05/10/算法设计与分析期末复习/img1.jpg">
+<meta property="og:image" content="https://yeeby2019.github.io/2021/05/10/算法设计与分析期末复习/img2.jpg">
+<meta property="og:updated_time" content="2021-07-15T11:12:32.898Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="算法设计与分析期末复习">
 <meta name="twitter:description" content="彭四伟好有气质(ˉ﹃ˉ)">
+<meta name="twitter:image" content="https://yeeby2019.github.io/2021/05/10/算法设计与分析期末复习/img1.jpg">
   
     <link rel="alternative" href="/atom.xml" title="欢迎！" type="application/atom+xml">
   
@@ -54,7 +57,7 @@
 		  <h1 class="header-author"><a href="/">YeeBy</a></h1>
 		</hgroup>
 		
-		<p class="header-subtitle">&#34;学会享受孤独，永远追求爱情&#34;</p>
+		<p class="header-subtitle">&#34;生命是一团欲望&#34;</p>
 		
 
 		<nav class="header-menu">
@@ -114,7 +117,7 @@
 			  <h1 class="header-author js-header-author">YeeBy</h1>
 			</hgroup>
 			
-			<p class="header-subtitle"><i class="icon icon-quo-left"></i>&#34;学会享受孤独，永远追求爱情&#34;<i class="icon icon-quo-right"></i></p>
+			<p class="header-subtitle"><i class="icon icon-quo-left"></i>&#34;生命是一团欲望&#34;<i class="icon icon-quo-right"></i></p>
 			
 			
 			
@@ -214,9 +217,9 @@
 <p>$$ T(n)=\left{<br>\begin{aligned}<br>c’ &amp; &amp; n&lt;=1 \<br>T(n-1)+c &amp;  &amp; n&gt;1<br>\end{aligned}<br>\right.$$</p>
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">Hanoi</span><span class="params">(<span class="keyword">int</span> n,<span class="keyword">int</span> a,<span class="keyword">int</span> b,<span class="keyword">int</span> c)</span></span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(n&lt;=<span class="number">0</span>)<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">    Hanoi(n<span class="number">-1</span>,a,c,b);</span><br><span class="line">    Move(n,a,c);</span><br><span class="line">    Hanoi(n<span class="number">-1</span>,b,a,c);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<p>$$ T(n)=\left{<br>\begin{aligned}<br>c’ &amp; &amp; n&lt;=0 \<br>2T(n-1)+c &amp;  &amp; n&gt;1<br>\end{aligned}<br>\right.$$</p>
+<p>​    <img src="/2021/05/10/算法设计与分析期末复习/img1.jpg" title="img1"></p>
 <p>这里考点很少，因为涉及到数学，主要背下来一个公式法：</p>
-<p>$$T(n)=\left{<br>\begin{aligned}<br>O(1) &amp; &amp; n=1 \<br>kT(n/m)+f(n) &amp;  &amp; n&gt;1<br>\end{aligned}<br>\right.$$</p>
+<p>​    <img src="/2021/05/10/算法设计与分析期末复习/img2.jpg" title="img2"></p>
 <p>$T(n)=n^{log_mk}+\sum_{j=0}^{log_mn-1}k^jf(n/m^j)$</p>
 <h3 id="二叉树计数问题"><a href="#二叉树计数问题" class="headerlink" title="二叉树计数问题"></a>二叉树计数问题</h3><p>由n个结点可以构成$\frac{1}{n+1}C_{2n}^n$种不同形态的二叉树</p>
 <h2 id="第2章-穷举法"><a href="#第2章-穷举法" class="headerlink" title="第2章 穷举法"></a>第2章 穷举法</h2><p>就是暴力枚举解空间，寻找可行解</p>
@@ -244,6 +247,24 @@
 <p>1/6 &lt; 1/r + 1/r</p>
 <p>4 ≤ r &lt; 12</p>
 <h2 id="第3章-递归与分治"><a href="#第3章-递归与分治" class="headerlink" title="第3章 递归与分治"></a>第3章 递归与分治</h2><h3 id="全排列问题"><a href="#全排列问题" class="headerlink" title="全排列问题"></a>全排列问题</h3><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="keyword">typedef</span> <span class="keyword">long</span> <span class="keyword">long</span> ll;</span><br><span class="line"><span class="keyword">int</span> n;</span><br><span class="line"><span class="keyword">int</span> arr[<span class="number">1005</span>];</span><br><span class="line"><span class="keyword">int</span> cnt;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">init</span><span class="params">()</span></span>&#123;<span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">1</span>;i&lt;=n;i++)arr[i] = i;&#125;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">f</span><span class="params">(<span class="keyword">int</span> ii)</span></span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(ii &gt;= n)&#123;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">1</span>;i&lt;=n;i++)<span class="built_in">printf</span>(<span class="string">"%d "</span>,arr[i]);</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">"\n"</span>);</span><br><span class="line">        cnt++;</span><br><span class="line">        <span class="keyword">return</span> ;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i = ii;i&lt;=n;i++)&#123;</span><br><span class="line">        swap(arr[ii],arr[i]);</span><br><span class="line">        f(ii+<span class="number">1</span>);</span><br><span class="line">        swap(arr[ii],arr[i]);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">solve</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">"%d"</span>,&amp;n);</span><br><span class="line">    init();</span><br><span class="line">    f(<span class="number">1</span>);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"%d"</span>,cnt);</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    solve();</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="dfs输出子集"><a href="#dfs输出子集" class="headerlink" title="dfs输出子集"></a>dfs输出子集</h3><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="keyword">typedef</span> <span class="keyword">long</span> <span class="keyword">long</span> ll;</span><br><span class="line"><span class="keyword">int</span> arr[<span class="number">1005</span>];</span><br><span class="line"><span class="keyword">int</span> n;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">init</span><span class="params">()</span></span>&#123;<span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">1</span>;i&lt;=n;i++)arr[i] = i;&#125;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">dfs</span><span class="params">(<span class="keyword">int</span> ii,<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; brr)</span></span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(ii &gt; n)&#123;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>;i&lt;(<span class="keyword">int</span>)brr.size();i++)<span class="built_in">printf</span>(<span class="string">"%d "</span>,brr[i]);</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">"\n"</span>);</span><br><span class="line">        <span class="keyword">return</span> ;</span><br><span class="line">    &#125;</span><br><span class="line">    brr.push_back(arr[ii]);</span><br><span class="line">    dfs(ii+<span class="number">1</span>,brr);</span><br><span class="line">    brr.pop_back();</span><br><span class="line">    dfs(ii+<span class="number">1</span>,brr);</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">solve</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">"%d"</span>,&amp;n);</span><br><span class="line">    init();</span><br><span class="line">    <span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; brr;</span><br><span class="line">    dfs(<span class="number">1</span>,brr);</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    solve();</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>如果数据规模小，我们可以直接二进制枚举，但是考试可能不给分，不是讲课范围</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="keyword">typedef</span> <span class="keyword">long</span> <span class="keyword">long</span> ll;</span><br><span class="line"><span class="keyword">int</span> arr[<span class="number">1005</span>];</span><br><span class="line"><span class="keyword">int</span> n;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">init</span><span class="params">()</span></span>&#123;<span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">1</span>;i&lt;=n;i++)arr[i] = i;&#125;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">solve</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">"%d"</span>,&amp;n);</span><br><span class="line">    init();</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">1</span>;i&lt;=(<span class="number">1</span>&lt;&lt;n);i++)&#123;</span><br><span class="line">        <span class="keyword">int</span> k = i;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">1</span>;i&lt;=n;i++)&#123;</span><br><span class="line">            <span class="keyword">if</span>(k&amp;<span class="number">1</span>)<span class="built_in">printf</span>(<span class="string">"%d "</span>,arr[i]);</span><br><span class="line">            k&gt;&gt;=<span class="number">1</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">"\n"</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    solve();</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="删数问题"><a href="#删数问题" class="headerlink" title="删数问题"></a>删数问题</h3><p>n给定n 位正整数a，去掉其中任意k≤n 个数字后，剩下的数字按原次序排列组成一个新的正整数。对于给定的n位正整数a 和正整数k，设计一个算法找出剩下数字组成的新数最小的删数方案。</p>
+<p>n例如，a=178543，k=4，则结果为13。</p>
+<hr>
+<p>两种方法：</p>
+<p>方法1：从头至尾找出现的第一个连续递增子序列的末尾，删掉那个数，重复该操作</p>
+<p>方法2：</p>
+<p>从头开始每次取长度为k+1的区间找最小值保留，然后删除最小值前面的数</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="keyword">typedef</span> <span class="keyword">long</span> <span class="keyword">long</span> ll;</span><br><span class="line"><span class="keyword">int</span> arr[<span class="number">1005</span>];</span><br><span class="line"><span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; ans;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">solve</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="built_in">string</span> s;<span class="built_in">cin</span>&gt;&gt;s;</span><br><span class="line">    <span class="keyword">int</span> n = s.size();</span><br><span class="line">    <span class="keyword">int</span> k;<span class="built_in">scanf</span>(<span class="string">"%d"</span>,&amp;k);</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>;i&lt;n;i++)arr[i+<span class="number">1</span>] = s[i]-<span class="string">'0'</span>;</span><br><span class="line">    <span class="keyword">int</span> t = n-k;</span><br><span class="line">    <span class="keyword">int</span> l = <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">while</span>(t--)&#123;</span><br><span class="line">        <span class="keyword">int</span> r = l+k;</span><br><span class="line">        <span class="keyword">int</span> mmin = INT_MAX;</span><br><span class="line">        <span class="keyword">int</span> pos = <span class="number">-1</span>;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i = l;i&lt;=r;i++)&#123;</span><br><span class="line">            <span class="keyword">if</span>(arr[i] &lt; mmin)&#123;</span><br><span class="line">                mmin = arr[i];</span><br><span class="line">                pos = i;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        arr[pos] = INT_MAX;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">1</span>;i&lt;pos;i++)arr[i] = INT_MAX;</span><br><span class="line">        ans.push_back(mmin);</span><br><span class="line">        l++;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">auto</span> v : ans)<span class="built_in">printf</span>(<span class="string">"%d"</span>,v);</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    solve();</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="整数拆分方案数"><a href="#整数拆分方案数" class="headerlink" title="整数拆分方案数"></a>整数拆分方案数</h3><p>将一个正整数N拆成若干个正整数的和，设计算法并写出算法代码，计算有多少种拆分方案。</p>
+<p>例如，若N＝7，则有6 1；5 2；5 1 1；4 3；4 2 1；4 1 1 1；3 3 1；3 2 2；3 2 1 1；3 1 1 1 1；2 2 2 1；2 2 1 1 1；2 1 1 1 1 1；1 1 1 1 1 1 1，共14种拆分方案。</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="keyword">typedef</span> <span class="keyword">long</span> <span class="keyword">long</span> ll;</span><br><span class="line"><span class="keyword">int</span> n,cnt;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">cal</span><span class="params">(<span class="keyword">int</span> x,<span class="keyword">int</span> ii)</span></span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(x &lt; <span class="number">0</span>)<span class="keyword">return</span> ;</span><br><span class="line">    <span class="keyword">if</span>(x == <span class="number">0</span>)&#123;cnt ++;<span class="keyword">return</span> ;&#125;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">1</span>;i&lt;=ii;i++)cal(x-i,i);</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">solve</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">"%d"</span>,&amp;n);</span><br><span class="line">    cal(n,n<span class="number">-1</span>);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"%d"</span>,cnt);</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    solve();</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 
       
@@ -284,7 +305,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">算法设计与分析</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">本科课程</a>
         		</li>
       		
 		</ul>
@@ -353,6 +374,15 @@
 
   
 <nav id="article-nav">
+  
+    <a href="/2021/07/14/MIT6-006-算法导论学习笔记/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          MIT6.006 算法导论学习笔记
+        
+      </div>
+    </a>
   
   
     <a href="/2021/05/09/使用Docker容器搭建各种漏洞环境/" id="article-nav-older" class="article-nav-link-wrap">
@@ -519,11 +549,15 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">Java</a>
+                <a href="javascript:void(0)" class="js-tag color4">LeetCode</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">LeetCode</a>
+                <a href="javascript:void(0)" class="js-tag color4">MIT</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">Java</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -535,11 +569,11 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">网络安全</a>
+                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
+                <a href="javascript:void(0)" class="js-tag color5">网络安全</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -547,7 +581,7 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">算法设计与分析</a>
+                <a href="javascript:void(0)" class="js-tag color5">本科课程</a>
               </li>
              
               <li class="article-tag-list-item">

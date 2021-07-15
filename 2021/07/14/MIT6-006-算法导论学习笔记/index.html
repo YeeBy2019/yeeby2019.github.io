@@ -6,15 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="https://yeeby2019.github.io">
-  <title>Tag: Atcoder | 欢迎！</title>
+  <title>MIT6.006 算法导论学习笔记 | 欢迎！</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="欢迎！">
-<meta property="og:url" content="https://yeeby2019.github.io/tags/Atcoder/page/2/index.html">
+  <meta name="keywords" content="MIT">
+<meta property="og:type" content="article">
+<meta property="og:title" content="MIT6.006 算法导论学习笔记">
+<meta property="og:url" content="https://yeeby2019.github.io/2021/07/14/MIT6-006-算法导论学习笔记/index.html">
 <meta property="og:site_name" content="欢迎！">
 <meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="https://yeeby2019.github.io/2021/07/14/MIT6-006-算法导论学习笔记/img1.jpg">
+<meta property="og:updated_time" content="2021-07-15T11:47:18.528Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="欢迎！">
+<meta name="twitter:title" content="MIT6.006 算法导论学习笔记">
+<meta name="twitter:image" content="https://yeeby2019.github.io/2021/07/14/MIT6-006-算法导论学习笔记/img1.jpg">
   
     <link rel="alternative" href="/atom.xml" title="欢迎！" type="application/atom+xml">
   
@@ -154,177 +158,221 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-MIT6-006-算法导论学习笔记" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      MIT6.006 算法导论学习笔记
+    </h1>
+  
+
+        
+        <a href="/2021/07/14/MIT6-006-算法导论学习笔记/" class="archive-article-date">
+  	<time datetime="2021-07-14T13:58:42.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-07-14</time>
+</a>
+        
+      </header>
     
+    <div class="article-entry" itemprop="articleBody">
+      
+        <br>
+
+<a id="more"></a>
+
+<hr>
+<h2 id="第1讲-课程简介及算法分析"><a href="#第1讲-课程简介及算法分析" class="headerlink" title="第1讲 课程简介及算法分析"></a>第1讲 课程简介及算法分析</h2><p>初感受：双语字幕真真锻炼孩子的英文水平，并畅想着以后看生肉的网课</p>
+<p>课程简介说的好细致，把平时分的各种可能情况都理了个遍，并申明了一定要实事求是，拿出学术研究的态度</p>
+<p>在软件工程的环境中，什么比性能更重要呢？</p>
+<p>正确性、简洁、可维护性、成本、稳定性、特性、功能性、模块化、安全……2000年以后，安全变得远比性能重要</p>
+<p>在90年代，计算机界出了一件大事，为什么人们更青睐苹果操作系统，而不是Windows呢？答案是用户友好。如果你一直关注计算机的发展历程，你就会见证90年代计算机是如何进入用户友好时代的。</p>
+<p>以上这些都比性能重要，为什么我们还要关注性能？</p>
+<p>一、算法能够将不可行变成可行</p>
+<p>二、算法是一种让程序最为简洁的思考方式</p>
+<p>性能是确保良好的用户体验的前提</p>
+<p>例如人们会说，使用Java编程性能会损失三倍左右，但是值得为Java付出这些代价，因为它提供面向对象的特性，以及异常机制等等，所以人们能够接受三倍的性能损失</p>
+<p>不过感性地来说，为什么探寻算法会有乐趣？因为速度永远让人渴望！这很有趣</p>
+<p>下面我们来考虑一个经典问题：排序问题。</p>
+<p>插入排序(Insertion-Sort)：</p>
+<p>伪码描述我就不在这里写了，看书嘛</p>
+<p>核心思想很简单，假设一共有 n 个元素待排序，首先我们要有一个循环，从 2 到 n 遍历每一个元素，然后使用一个 while 循环，向前寻找第一个比自己小的元素，把自己插入到它身后，这样就完成了一遍循环，n-1 次循环过后，很明显我们将会得到一个排序好的数组对吧</p>
+<p>PS：这里教授发表了一下自己对于使用缩进来表示代码块的语言的看法（python:看我干嘛），他认为It’s generally a bad idea，因为当代码换页的时候，程序员很难知道自己在哪一个嵌套的层级中，不如花括号清晰明了，但是伪代码中缩进是一个不错的选择，因为这使得伪代码简短且容易书写</p>
+<p>现在我们用插入排序来演示一下最基本的算法分析：</p>
+<p>我们通常最关注最坏情况分析，为的是能够向用户做出承诺</p>
+<p>其次我们关注平均情况，我们考虑输入规模为 n 时所有可能输入的期望时间</p>
+<p>什么是期望时间？就是每种输入乘以自身概率累加求和除以 n ，是一种加权平均。但是我们并不知道某种特定输入在给定情形下出现的概率是多少，所以我们通常假设每种输入出现概率相同。（某概率论没学好的孩子抱头痛哭）</p>
+<p>最后是最好情况分析，我们通常将其称为 Bogus !（大声）</p>
+<p>意为 假象，因为这个指标确实没啥用。我们说一件事最快三秒完成，但它还是有可能三年才完成，我们并没有做出 “承诺”</p>
+<p>在分析算法的时候，我们通常不考虑那些依赖于机器的常量，所谓“渐进分析”法，不去检查实际的运行时间，而是关注运行时间的增长，这不难理解，在上这门课之前我们就经常这样干：检查代码中最大的循环重数，而不考虑剩余的常数时间，后面我们将会学到几个记号，就是用来表示算法的时间复杂度的。上述我们所说的将一个表示时间复杂度的公式弃去它的低阶项，并忽略前面的常数因子，我们通常用 θ 表示，θ是一种弱符号(weak notation)</p>
+<p>所以很明显就有以下结论：当 n 趋于无穷大的时候，一定有个值，使得 θ(n^3) &gt; θ(n^2) ，θ(n^2)的算法永远会更快，即便是手算 θ(n^2) 的算法和使用计算机计算 θ(n^3) 的算法，这个结论依然成立，这就是 θ 符号的伟大之处，它能一举满足我们对相对和绝对速度的双重比较要求</p>
+<p>接下来这个教授说出了那个著名的玩笑：只要两年中每天坚持编程，你就能成为编程高手，如果你想成为一名世界级的大牛，你既可以选择十年如一日每天坚持编程，也可以选择两年中每天编程，然后上一门算法课。</p>
+<p>很明显，插入排序的时间复杂度可以被记为 θ(n^2)</p>
+<p>下面我们介绍另一个排序算法：归并排序(Merge-Sort)</p>
+<p>这是个递归程序，对于A[1…n]进行排序</p>
+<p>如果 n == 1 , 排序完成（不需要排序）</p>
+<p>否则，对A[1…[n/2]] and A[[n/2]+1…n] 两部分进行排序，并将排好序的两个表归并</p>
+<p>如何归并？</p>
+<p>我们维护两个头指针，然后分别比较两个头指针指向元素的大小，并将较小的元素依次push_back进一个新表中，指针后移，最终两个指针都遍历完对应表内元素，则新表中的元素即为两个表的元素归并后排好序的情况。在这个过程中，我们一共做了两个表长度之和次操作，所以单独拿出归并子程序，我们说它的时间复杂度是 θ(n) 的。</p>
+<p>现在我们考虑整个归并排序的时间复杂度，学过此算法的同学会直接说它是 θ(nlogn) 的，但具体的推算其实很有趣。</p>
+<p>根据以上递归过程，我们可以写出如下时间复杂度表达式：</p>
+<p>​    <img src="/2021/07/14/MIT6-006-算法导论学习笔记/img1.jpg" title="img1"></p>
+<p>我们通常不考虑常数时间，所以省略 n=1 的情况，它对于结果没有影响。</p>
+<p>所以 $T(n) = 2T(n/2)+cn,c&gt;0$</p>
+<p>想要推算出 nlogn ，我们采用一种叫递归树的方法</p>
+<p>递归每次向下有两个分支，那么这棵树的高度就是 logn ，而每一层所需要的时间是 cn ，很明显最终的时间复杂度就是 θ(nlogn)，所以渐进情况下，归并排序快于插入排序</p>
+<p>Class dismissed.</p>
+<h2 id="第2讲-渐进符号、递归及解法"><a href="#第2讲-渐进符号、递归及解法" class="headerlink" title="第2讲 渐进符号、递归及解法"></a>第2讲 渐进符号、递归及解法</h2><p>数 学 基 础！</p>
+<p>首先是大O符号，我们定义 $f(n)=O(g(n))$，这表示存在常数$c&gt;0,n_0&gt;0$，使得$0≤f(n)≤cg(n),n≥n_0$</p>
+<p>这意味着$f(n)$以$g(n)$为上界，例如$2n^2=O(n^3)$</p>
+<p>但是要注意，这里的等号并不具有对称性，也就是说 A=B 并不意味着 B=A，为什么呢？</p>
+<p>其实这里的大O符号是一个weak notation，它代表的是一个集合。这个等号实际上相当于属于号∈，在一些论文中也可以看到这种用法。$f(n)$属于$g(n)$构成的函数集$O(g(n))$，上述例子也应该理解为$2n^2$属于函数集$O(n^3)$</p>
+<p>Ex. $f(n)=n^3+O(n^2)$ 意味着存在$h(n)∈O(n^2)$使得$f(n)=n^3+h(n)$，这描述了一个误差界限</p>
+
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/assets/img/wechat.png">
+                      <span class="reward-type">微信</span>
+                    </div>
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
       
       
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2020" class="archive-year">2020</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/11/23/AtCoder-Beginner-Contest-184/" class="archive-article-date">
-  	<time datetime="2020-11-23T03:45:54.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-11-23</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/11/23/AtCoder-Beginner-Contest-184/">AtCoder Beginner Contest 184</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">Atcoder</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">MIT</a>
         		</li>
       		
 		</ul>
 	</div>
 
-          
+      
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=https://yeeby2019.github.io/2021/07/14/MIT6-006-算法导论学习笔记/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/03/22/Atcoder-Beginner-Contest-159-B-String-Palindrome/" class="archive-article-date">
-  	<time datetime="2020-03-22T14:44:14.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-03-22</time>
-</a>
+<nav id="article-nav">
+  
+  
+    <a href="/2021/05/10/算法设计与分析期末复习/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">算法设计与分析期末复习</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
+        
+        
+    </div>
+</aside>
+
+
+
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/03/22/Atcoder-Beginner-Contest-159-B-String-Palindrome/">Atcoder Beginner Contest 159:B String Palindrome</a>
-    </h1>
+  
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">Atcoder</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/03/15/Atcoder-Panasonic-Programming-Contest-2020-D-String-Equivalence/" class="archive-article-date">
-  	<time datetime="2020-03-15T14:31:36.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-03-15</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/03/15/Atcoder-Panasonic-Programming-Contest-2020-D-String-Equivalence/">Atcoder Panasonic Programming Contest 2020:D String Equivalence</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">Atcoder</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/03/15/Atcoder-Panasonic-Programming-Contest-2020-C/" class="archive-article-date">
-  	<time datetime="2020-03-15T07:05:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-03-15</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/03/15/Atcoder-Panasonic-Programming-Contest-2020-C/">Atcoder Panasonic Programming Contest 2020:C Sqrt Inequality</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">Atcoder</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
-
-    
-    <nav id="page-nav">
-      <a class="extend prev" rel="prev" href="/tags/Atcoder/">&laquo; Prev</a><a class="page-number" href="/tags/Atcoder/">1</a><span class="page-number current">2</span>
-    </nav>
   
 
 
@@ -348,9 +396,9 @@
 	var yiliaConfig = {
 		mathjax: true,
 		isHome: false,
-		isPost: false,
+		isPost: true,
 		isArchive: false,
-		isTag: true,
+		isTag: false,
 		isCategory: false,
 		open_in_new: false,
 		toc_hide_index: true,
